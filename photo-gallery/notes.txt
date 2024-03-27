@@ -1,0 +1,39 @@
+* box-sizing: content-box; *
+Por padrão, o modelo 'content-box' é usado.  Com este modelo, quando um elemento possui uma width específica, essa width é calculada com base apenas no conteúdo do elemento. Os valores de padding e border são adicionados à width total, de modo que o elemento cresce para acomodar esses valores.
+
+* box-sizing: border-box; *
+O 'border-box' faz o oposto da 'content-box'.A width total do elemento, incluindo padding e border, será a width explícita definida.  O conteúdo do elemento diminuirá para dar espaço ao padding e à border.
+
+* dispaly: flex; *
+Flexbox é um layout CSS unidimensional que pode controlar a forma como os itens são espaçados e alinhados dentro de um contêiner.
+Para usá-lo, atribua a um elemento uma propriedade display flex. Isso tornará o elemento um flex container. Quaisquer filhos diretos de um flex container são chamados de flex items.
+
+* flex-direction: ...; *
+Flexbox possui eixo principal e eixo transversal.  O eixo principal é definido pela propriedade flex-direction, que possui quatro valores possíveis:
+
+     - row (padrão): eixo horizontal com itens flexíveis da esquerda para a direita
+     - row-reverse: eixo horizontal com itens flexíveis da direita para a esquerda
+     - column: eixo vertical com itens flexíveis de cima para baixo
+     - column-reverse: eixo vertical com itens flexíveis de baixo para cima
+
+* flex-wrap: wrap *
+A propriedade flex-wrap determina como seus flex items se comportam quando o flex container é muito pequeno. Configurá-lo para quebrar 'wrap' permitirá que os itens sejam quebrados na próxima linha ou coluna.  'nowrap' (padrão) impedirá que seus itens sejam embrulhados e os encolherá, se necessário.
+
+* justify-content: center; *
+A propriedade justify-content determina como os itens dentro de um flex container são posicionados ao longo do eixo principal, afetando sua posição e o espaço ao seu redor.
+
+* align-items: center; *
+A propriedade 'align-items' posiciona o conteúdo flexível ao longo do eixo cruzado. Nesse caso, com sua 'flex-direction' definida como 'row', seu eixo transversal seria vertical.
+
+* object-fit: cover; *
+Observe como algumas de suas imagens ficaram distorcidas.  Isso ocorre porque as imagens têm proporções diferentes.  Em vez de definir cada proporção individualmente, você pode usar a propriedade object-fit para determinar como as imagens devem se comportar.
+
+* gap: 16px; *
+A propriedade abreviada CSS 'gap' define as lacunas, também conhecidas como medianizes, entre linhas e colunas.  A propriedade 'gap' e suas subpropriedades 'row-gap' e 'column-gap' fornecem essa funcionalidade para flex, grid, and multi-column layout. Você aplica a propriedade ao elemento contêiner.
+
+* .container::after { *
+  content: "";
+  width: 860px;
+}
+
+O pseudoelemento ::after cria um elemento que é o último filho do elemento selecionado.  Você pode usá-lo para adicionar um elemento vazio após a última imagem. Se você atribuir a mesma largura das imagens, a última imagem será empurrada para a esquerda quando a galeria estiver em um layout de duas colunas.  No momento, está no centro porque você configurou justify-content: center no flex container.
