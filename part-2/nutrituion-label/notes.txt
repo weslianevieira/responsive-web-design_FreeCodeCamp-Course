@@ -1,0 +1,21 @@
+* letter-spacing: 0.15px; *
+A propriedade 'letter-spacin'g pode ser usada para ajustar o espaço entre cada caractere de texto em um elemento.
+
+* <p class="bold">Serving size <span>2/3 cup (55g)</span></p> *
+p {
+  display:flex;
+  justify-content: space-between;
+}
+O espaçamento horizontal entre elementos igualmente importantes pode aumentar a legibilidade do seu texto.
+
+* font-size: 0.85rem; * aproximadamente 13,6 px
+A unidade rem significa root em e é relativa ao tamanho da fonte do elemento html. (lembre-se de que você configurou seu html para ter um tamanho de fonte de 16px).
+
+* div:not(#example) { *
+  color: red;
+}
+
+O pseudo-seletor :not pode ser usado para selecionar todos os elementos que não correspondem à regra CSS fornecida. O acima seleciona todos os elementos div sem um id de example.
+
+* text-indent: -8px; * 
+A propriedade CSS text-indent especifica a quantidade de recuo (indent/espaço vazio) que é colocado antes de linhas de texto em um bloco.
